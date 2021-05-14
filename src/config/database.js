@@ -1,25 +1,25 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING,{
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
 
 
-    useNewUrlParser: true,
+        useNewUrlParser: true,
 
-    useUnifiedTopology: true,
+        useUnifiedTopology: true,
 
-    useCreateIndex:true,
+        useCreateIndex: true,
 
-    useFindAndModify:false
+        useFindAndModify: false
 
 })
 
-    .then(() => {
+        .then(() => {
 
-            console.log('Veri tabanına bağlanıldı.. <--- ');
-    })
-    .catch((err) =>{
+                console.log('Veri tabanına bağlanıldı.. <--- ');
+        })
+        .catch((err) => {
 
-            console.log('Veri tabanına bağlanırken hata.. === '+err.toString());
+                console.log('Veri tabanına bağlanırken hata.. === ' + err.toString());
 
-    })
+        })
